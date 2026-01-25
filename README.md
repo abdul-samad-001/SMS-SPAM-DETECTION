@@ -111,14 +111,3 @@ B.Tech – Computer Science (Artificial Intelligence & Machine Learning)
 
 ⭐ If you found this project useful, consider giving it a star on GitHub!
 
-
----
-
-### ✅ Next (optional but powerful)
-If you want, I can:
-- add a **Screenshots** section to README  
-- write **interview explanation (How it works)**  
-- create **resume-ready project bullets**  
-- improve UI with **confidence bar animation**
-
-Just say what’s next 🚀

@@ -25,11 +25,13 @@ def predict():
     prediction = model.predict(vector)[0]
     probability = model.predict_proba(vector)[0]
 
-    confidence = float(max(probability))  # highest probability
+    confidence = float(max(probability)) * 100
 
     return jsonify({
         "spam": bool(prediction),
-        "confidence": round(confidence * 100, 2)
+        "confidence": round(confidence, 2)
     })
+
+
 
 

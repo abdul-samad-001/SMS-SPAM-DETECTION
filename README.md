@@ -84,17 +84,19 @@ SMS-SPAM-DETECTION/
 | Happy birthday, have a great day! | Not Spam | 98% |
 | Win ₹10,000 cash now! Click link | Spam | 94% |
 
-📈 Future Improvements
+## 📸 Screenshots
 
-Confidence progress bar visualization
+| Home Page | Prediction Result |
+|----------|-------------------|
+| ![Home](screenshots/home.png) | ![Result](screenshots/spam.png) |
 
-Probability breakdown (Spam vs Ham)
 
-Multi-language support
-
-Model explainability (feature importance)
-
-User authentication and logging
+## 📈 Future Improvements
+- Confidence progress bar visualization  
+- Probability breakdown (Spam vs Ham)  
+- Multi-language support  
+- Model explainability (feature importance)  
+- User authentication and logging  
 
 👤 Author
 

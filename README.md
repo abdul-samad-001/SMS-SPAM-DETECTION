@@ -69,11 +69,10 @@ SMS-SPAM-DETECTION/
 ### Endpoint
 
 ### Request Body
-```json
 {
   "message": "Congratulations! You won a free prize"
 }
-```
+### Response
 {
   "spam": true,
   "confidence": 93.45

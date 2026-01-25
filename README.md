@@ -73,6 +73,7 @@ SMS-SPAM-DETECTION/
 {
   "message": "Congratulations! You won a free prize"
 }
+```
 {
   "spam": true,
   "confidence": 93.45

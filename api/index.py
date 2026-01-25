@@ -16,9 +16,20 @@ def home():
 def predict():
     data = request.get_json() or {}
     message = data.get("message", "")
+
     if not message:
         return jsonify({"error": "Message is required"}), 400
 
     vector = vectorizer.transform([message])
+
     prediction = model.predict(vector)[0]
-    return jsonify({"spam": bool(prediction)})
+    probability = model.predict_proba(vector)[0]
+
+    confidence = float(max(probability))  # highest probability
+
+    return jsonify({
+        "spam": bool(prediction),
+        "confidence": round(confidence * 100, 2)
+    })
+
+

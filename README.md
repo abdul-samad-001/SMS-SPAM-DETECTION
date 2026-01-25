@@ -97,11 +97,12 @@ SMS-SPAM-DETECTION/
 
 
 ## 📈 Future Improvements
-- Confidence progress bar visualization  
-- Probability breakdown (Spam vs Ham)  
-- Multi-language support  
-- Model explainability (feature importance)  
-- User authentication and logging  
+- Add a visual confidence indicator (progress bar) to improve result interpretability  
+- Display detailed probability distribution for Spam vs. Not Spam predictions  
+- Extend support to multiple languages for broader usability  
+- Integrate model explainability to highlight important features influencing predictions  
+- Enhance security and analytics by adding user authentication and request logging  
+
 
 👤 Author
 

@@ -12,8 +12,11 @@ def home():
 
 @app.route("/predict", methods=["POST"])
 def predict():
-    data = request.get_json()
+    data = request.get_json() or {}
     message = data.get("message", "")
+    if not message:
+        return jsonify({"error": "Message is required"}), 400
+
     vector = vectorizer.transform([message])
     prediction = model.predict(vector)[0]
     return jsonify({"spam": bool(prediction)})

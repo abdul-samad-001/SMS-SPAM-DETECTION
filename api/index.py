@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify, render_template
+from flask_cors import CORS
 import pickle
 
 app = Flask(__name__, template_folder="templates")
+CORS(app)
 
 model = pickle.load(open("model.pkl", "rb"))
 vectorizer = pickle.load(open("vectorizer.pkl", "rb"))

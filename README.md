@@ -55,6 +55,10 @@ SMS-SPAM-DETECTION/
 │ ├── index.py
 │ └── templates/
 │ └── index.html
+├── screenshots/
+│ ├── home.png
+│ ├── spam.png
+│ └── not-spam.png
 ├── model.pkl
 ├── vectorizer.pkl
 ├── spam.csv

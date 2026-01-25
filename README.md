@@ -86,7 +86,7 @@ SMS-SPAM-DETECTION/
 | Message | Result | Confidence |
 |--------|--------|------------|
 | Happy birthday, have a great day! | Not Spam | 98% |
-| Win ₹10,000 cash now! Click link | Spam | 94% |
+| FREE gift card worth $500. Claim before it expires. | Spam | 85.84% |
 
 ## 📸 Screenshots
 

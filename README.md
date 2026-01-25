@@ -51,6 +51,7 @@ The application provides **real-time predictions with confidence scores** and is
 
 ## 📂 Project Structure
 SMS-SPAM-DETECTION/
+```
 ├── api/
 │ ├── index.py
 │ └── templates/
@@ -65,7 +66,7 @@ SMS-SPAM-DETECTION/
 ├── requirements.txt
 ├── vercel.json
 └── README.md
-
+```
 ---
 
 ## 🔌 API Usage

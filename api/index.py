@@ -17,3 +17,4 @@ def predict():
     vector = vectorizer.transform([message])
     prediction = model.predict(vector)[0]
     return jsonify({"spam": bool(prediction)})
+

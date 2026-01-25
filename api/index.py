@@ -1,14 +1,14 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import pickle
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="templates")
 
 model = pickle.load(open("model.pkl", "rb"))
 vectorizer = pickle.load(open("vectorizer.pkl", "rb"))
 
 @app.route("/", methods=["GET"])
 def home():
-    return "SMS Spam Detection API is live 🚀"
+    return render_template("index.html")
 
 @app.route("/predict", methods=["POST"])
 def predict():
@@ -20,4 +20,3 @@ def predict():
     vector = vectorizer.transform([message])
     prediction = model.predict(vector)[0]
     return jsonify({"spam": bool(prediction)})
-

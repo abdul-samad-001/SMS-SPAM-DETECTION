@@ -94,10 +94,16 @@
         const data = await response.json();
 
         if (data.spam) {
-          resultDiv.innerHTML = `🚫 SPAM MESSAGE <br> Confidence: ${data.confidence}%`;
+          resultDiv.innerHTML = `
+          🚫 <b>SPAM</b><br>
+          Confidence: ${data.confidence ?? "N/A"}%
+          `;
           resultDiv.className = "result spam";
         } else {
-          resultDiv.innerHTML = `✅ NOT SPAM <br> Confidence: ${data.confidence}%`;
+          resultDiv.innerHTML = `
+          ✅ <b>NOT SPAM</b><br>
+          Confidence: ${data.confidence ?? "N/A"}%
+          `;
           resultDiv.className = "result ham";
         }
       } catch (error) {
@@ -109,5 +115,6 @@
 
 </body>
 </html>
+
 
 

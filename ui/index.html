@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SMS Spam Detection</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      background: #020617;
+      padding: 25px;
+      border-radius: 10px;
+      width: 400px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    textarea {
+      width: 100%;
+      height: 90px;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+      resize: none;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+    button:hover {
+      background: #1d4ed8;
+    }
+    .result {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .spam {
+      color: #ef4444;
+    }
+    .ham {
+      color: #22c55e;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>📩 SMS Spam Detection</h2>
+    <textarea id="message" placeholder="Enter SMS message here..."></textarea>
+    <button onclick="checkSpam()">Check Spam</button>
+    <div id="result" class="result"></div>
+  </div>
+
+  <script>
+    async function checkSpam() {
+      const message = document.getElementById("message").value;
+      const resultDiv = document.getElementById("result");
+
+      if (!message.trim()) {
+        resultDiv.innerHTML = "❗ Please enter a message.";
+        resultDiv.className = "result";
+        return;
+      }
+
+      resultDiv.innerHTML = "⏳ Checking...";
+
+      try {
+        const response = await fetch(
+          "https://sms-spam-detection-kappa.vercel.app/predict",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message })
+          }
+        );
+
+        const data = await response.json();
+
+        if (data.spam) {
+          resultDiv.innerHTML = "🚫 SPAM MESSAGE";
+          resultDiv.className = "result spam";
+        } else {
+          resultDiv.innerHTML = "✅ NOT SPAM";
+          resultDiv.className = "result ham";
+        }
+      } catch (error) {
+        resultDiv.innerHTML = "❌ Error connecting to API";
+        resultDiv.className = "result";
+      }
+    }
+  </script>
+
+</body>
+</html>

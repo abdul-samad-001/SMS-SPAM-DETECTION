@@ -73,14 +73,17 @@ SMS-SPAM-DETECTION/
   "message": "Congratulations! You won a free prize"
 }
 ### Response
-{
+
   "spam": true,
   "confidence": 93.45
-}
-🧪 Example Predictions
-Message	Result	Confidence
-"Happy birthday, have a great day!"	Not Spam	98%
-"Win ₹10,000 cash now! Click link"	Spam	94%
+  
+## 🧪 Example Predictions
+
+| Message | Result | Confidence |
+|--------|--------|------------|
+| Happy birthday, have a great day! | Not Spam | 98% |
+| Win ₹10,000 cash now! Click link | Spam | 94% |
+
 📈 Future Improvements
 
 Confidence progress bar visualization

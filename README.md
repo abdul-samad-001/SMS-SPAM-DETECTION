@@ -53,13 +53,13 @@ The application provides **real-time predictions with confidence scores** and is
 SMS-SPAM-DETECTION/
 ```
 ├── api/
-│ ├── index.py
-│ └── templates/
-│ └── index.html
+│     ├── index.py
+│     └── templates/
+│     └── index.html
 ├── screenshots/
-│ ├── home.png
-│ ├── spam.png
-│ └── not-spam.png
+│     ├── home.png
+│     ├── spam.png
+│     └── not-spam.png
 ├── model.pkl
 ├── vectorizer.pkl
 ├── spam.csv

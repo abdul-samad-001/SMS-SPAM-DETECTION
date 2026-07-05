@@ -1,5 +1,5 @@
 # 📩 SMS Spam Detection System
- 
+  
 A full-stack **Machine Learning web application** that classifies SMS messages as **Spam** or **Not Spam** using **Natural Language Processing (NLP)** and a trained ML model.  
 The application provides **real-time predictions with confidence scores** and is deployed on **Vercel**.
 

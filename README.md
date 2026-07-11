@@ -15,7 +15,7 @@ The application provides **real-time predictions with confidence scores** and is
 - REST API built with Flask
 - NLP-based text preprocessing
 - Fully deployed on Vercel (Frontend + Backend)
-
+ 
 ---
 
 ## 🧠 Machine Learning Details

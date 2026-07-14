@@ -6,7 +6,7 @@ The application provides **real-time predictions with confidence scores** and is
 🔗 **Live Demo:**  
 👉 https://sms-spam-detection-five.vercel.app/
  
----
+--- 
 
 ## 🚀 Features
 - Real-time SMS spam classification

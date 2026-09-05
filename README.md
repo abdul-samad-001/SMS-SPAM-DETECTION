@@ -6,7 +6,7 @@
 [![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel&logoColor=white)](https://sms-spam-detection-five.vercel.app/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#license)
  
-A full-stack machine learning web application that classifies SMS messages as **Spam** or **Not Spam** in real time, using natural language processing and a trained classification model. Built with a Flask REST API backend and a lightweight JavaScript frontend, fully deployed on Vercel.
+A full-stack machine learning web application that classifies SMS messages as **Spam** or **Not Spam** in real time, using natural language processing and a trained classification model. Built with a Flask REST API backend and a lightweight JavaScript frontend, fully deployed on Vercel.  
 
 **🔗 Live Demo:** [sms-spam-detection-five.vercel.app](https://sms-spam-detection-five.vercel.app/)
 
